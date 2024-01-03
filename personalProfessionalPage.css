@@ -1,163 +1,241 @@
-/* backgraound animation source from: https://alvarotrigo.com/blog/animated-backgrounds-css/ */
-@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
-
-*{
-    margin: 0px;
-    padding: 0px;
-}
-
 body{
-    font-family: 'Exo', sans-serif;
+    /* height: 5000px; */
     font-family: Arial;
+    background-color: black;
+    cursor: default;
 }
 
+p{
+    font-size:20px;
+    padding:0 40px;
+}
 
-.context {
+.nav-container{
+    position: fixed;
     width: 100%;
-    position: absolute;
-    top:50vh;
-    
-}
-
-.context h1{
-    text-align: center;
-    color: #fff;
-    font-size: 50px;
-}
-
-
-.area{
-    background: #4e54c8;  
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
-    width: 100%;
-    height:100vh;
-    
-   
-}
-
-.circles{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.circles li{
-    position: absolute;
-    display: block;
-    list-style: none;
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    animation: animate 25s linear infinite;
-    bottom: -150px;
-    
-}
-
-.circles li:nth-child(1){
-    left: 25%;
-    width: 80px;
-    height: 80px;
-    animation-delay: 0s;
-}
-
-
-.circles li:nth-child(2){
-    left: 10%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 2s;
-    animation-duration: 12s;
-}
-
-.circles li:nth-child(3){
-    left: 70%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 4s;
-}
-
-.circles li:nth-child(4){
-    left: 40%;
-    width: 60px;
-    height: 60px;
-    animation-delay: 0s;
-    animation-duration: 18s;
-}
-
-.circles li:nth-child(5){
-    left: 65%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 0s;
-}
-
-.circles li:nth-child(6){
-    left: 75%;
-    width: 110px;
-    height: 110px;
-    animation-delay: 3s;
-}
-
-.circles li:nth-child(7){
-    left: 35%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 7s;
-}
-
-.circles li:nth-child(10){
-    left: 85%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 0s;
-    animation-duration: 11s;
-}
-
-
-
-@keyframes animate {
-
-    0%{
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-        border-radius: 0;
-    }
-
-    100%{
-        transform: translateY(-1000px) rotate(720deg);
-        opacity: 0;
-        border-radius: 50%;
-    }
-
+    z-index: 100;
+    top:0;
 }
 
 .nav{
-    position: fixed;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+
     /* background-color: #8f94f9; */
     background-color: rgb(234, 234, 234);
-    align-items: center;
-    margin-top: 10px;
-    z-index: 100;
+    display: flex;
 }
 
-.nav{
-    flex:1;
+.nav-container a:hover{
+    background-color: rgb(250, 132, 152);
 }
 
-a{
+.nav-container a, .nav-container a:link, .nav-container a:visited{
     color:black;
+}
+.nav-container a:hover,.nav-container a:link:hover, .nav-container a:visited:hover{
+    color:black;
+    text-decoration: underline;
+}
+
+.info{
+    margin:50px 0;
+}
+
+.section{
+    padding:50px 0;
+    margin-bottom:10px;
+    /* background-color: lightpink; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(202, 202, 202);
+}
+
+#home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile-photo{
+    width: 250px;
+    margin-left:40px;
+    border-radius: 40%;
+    box-shadow: -10px 5px 5px rgb(131, 131, 131);
+}
+
+.home-text-section{
+    /* background-color: lightpink; */
+    top:0;
+}
+
+.my-name{
+    color:rgb(250, 132, 152);
+    font-size:55px;
+    font-weight: bold;
+}
+
+.info h1,.info h2{
+    margin-bottom:50px;
+    margin-top: 0;
+    /* background-color: lightblue; */
+}
+
+.info h2{
+    color:rgb(250, 132, 152);
+}
+
+#skills{
+    position: relative;
+}
+
+.skill-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    width: 70%;
+}
+
+.languages{
+    display: flex;
+    flex-direction: column;
+    padding:10px 60px;
+    right:0;
+    background-color: rgb(179, 179, 179);
+    border-radius: 20px;
+}
+
+.languages h3{
+    padding-bottom: 30px;
+}
+
+.languages-list{
+    padding: 20px 10px;
+    position: relative;
+
+}
+
+.languages-list li{
+    font-size: 20px; 
+    border: 2px solid black;
+    padding:30px;
+    background-color: rgb(211, 211, 211);
+
+}
+.logo-icon {
+    position: relative;
+    padding-left: 50px;
+    list-style-type: none; 
+    /* background-color: lightblue; */
+}
+
+.logo-icon::before {
+    content: '';
+    /* background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg); */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background-color: lightpink; */}
+
+#python-logo.logo-icon::before{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg);
+
+}
+
+#html-logo.logo-icon::before{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg);
+}
+
+#css-logo.logo-icon::before{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg);
+}
+#javascript-logo.logo-icon::before{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png);
+}
+#c-logo.logo-icon::before{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg);
+}
+
+#c-logo.logo-icon::before{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg);
+}
+
+#c-sharp-logo.logo-icon::before{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg);
+}
+
+#c-plus-plus-logo.logo-icon::before{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg);
+}
+
+.skill-text{
+    position: relative;
+    Padding:30px 20px;
+    max-width: 50%;
+    /* background-color: rgb(179, 179, 179); */
+    margin-right:-200px;
+}
+
+.skill-text p{
+    padding-top:20px;
+    font-size: 23px;
+    padding:45px;
+    margin:25px 0;
+    border-radius: 50%;
+    background-color:rgb(179, 179, 179);
+
+}
+
+#skills a:hover{
+    background-color:rgb(250, 132, 152);
+
+}
+
+#skills a, #skills a:link, #skills a:visited{
+    color:black;
+    font-size:25px;
+    border: 4px dotted  rgb(250, 132, 152);
+    padding: 5px 15px;
     text-decoration: none;
-    font-size:20px;
+    
+}
+#skills a:hover,#skills a:link:hover, #skills a:visited:hover{
+    color:white;
+    text-decoration: underline;
+}
+
+#contact{
+    align-items: center;
+}
+
+#contact ul{
+    margin:0;
+    background-color: lightblue;
     
 }
 
-.nav-link:hover{
-    
+#contact ul li{
+    display: inline;
+    background-color: lightpink;
+    list-style-type: none; 
+    padding:0;
+    margin:0;
+
+}
+
+#contact img{
+    width:40px;
+    background-color: orange;
+}
+
+#contact img:hover{
+    opacity: 0.5;
 }
 
