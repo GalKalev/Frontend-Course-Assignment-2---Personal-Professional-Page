@@ -294,10 +294,10 @@ background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_
 
     
 
-    .section {
+    #home {
         padding: 20px;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .languages {
