@@ -3,7 +3,13 @@ body{
     font-family: Arial;
     background-color: black;
     cursor: default;
+    text-size-adjust: auto;
+    /* max-width: 1400px;
+    min-width: 1000px; */
 }
+
+
+
 
 p{
     font-size:20px;
@@ -123,14 +129,14 @@ p{
     background-color: rgb(211, 211, 211);
 
 }
-.logo-icon {
+.logo-icon-skills {
     position: relative;
     padding-left: 50px;
     list-style-type: none; 
     /* background-color: lightblue; */
 }
 
-.logo-icon::before {
+.logo-icon-skills::before {
     content: '';
     /* background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg); */
     background-size: contain;
@@ -144,34 +150,34 @@ p{
     transform: translateY(-50%);
     /* background-color: lightpink; */}
 
-#python-logo.logo-icon::before{
+#python-logo.logo-icon-skills::before{
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg);
 
 }
 
-#html-logo.logo-icon::before{
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg);
+#html-logo.logo-icon-skills::before{
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg);
 }
 
-#css-logo.logo-icon::before{
+#css-logo.logo-icon-skills::before{
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg);
 }
-#javascript-logo.logo-icon::before{
+#javascript-logo.logo-icon-skills::before{
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png);
 }
-#c-logo.logo-icon::before{
+#c-logo.logo-icon-skills::before{
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg);
 }
 
-#c-logo.logo-icon::before{
+#c-logo.logo-icon-skills::before{
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg);
 }
 
-#c-sharp-logo.logo-icon::before{
+#c-sharp-logo.logo-icon-skills::before{
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg);
 }
 
-#c-plus-plus-logo.logo-icon::before{
+#c-plus-plus-logo.logo-icon-skills::before{
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg);
 }
 
@@ -211,31 +217,133 @@ p{
     text-decoration: underline;
 }
 
-#contact{
-    align-items: center;
+
+.contact-sites-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:180px;
+    /* background-color: red; */
 }
 
-#contact ul{
-    margin:0;
-    background-color: lightblue;
-    
+.logo-icon-contact{
+    position: relative;
 }
 
-#contact ul li{
-    display: inline;
-    background-color: lightpink;
-    list-style-type: none; 
-    padding:0;
-    margin:0;
-
-}
-
-#contact img{
+.logo-icon-contact img{
     width:40px;
-    background-color: orange;
+    /* background-color: orange; */
+    box-shadow: -2px 3px 3px rgb(131, 131, 131);
+    transition: 0.15s;
 }
 
-#contact img:hover{
-    opacity: 0.5;
+.logo-icon-contact img:hover{
+    box-shadow: 0 0 0;
+    /* background-color: green; */
 }
 
+#gamil-logo img{
+    padding-top:5px;
+    width: 45px;
+}
+
+.tooltip-links {
+    position: absolute;
+    display: none;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 5px;
+    bottom: -40px; /* Adjust the distance from the icon */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip-links:before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 0 8px 8px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+    top: -8px; /* Adjust the distance from the icon */
+    left: 50%;
+    transform: translateX(-50%);
+}
+.logo-icon-contact {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.logo-icon-contact:hover .tooltip-links {
+    display: block;
+}
+
+
+@media(max-width:950px){
+    /* .nav {
+        flex-direction: column;
+    } */
+
+    /* .nav-container a {
+        text-align: center;
+        width: 100%;
+    } */
+
+    
+
+    .section {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .languages {
+        padding: 10px;
+    }
+
+    .languages-list li {
+        padding: 20px;
+    }
+
+    .skill-container {
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .skill-text {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .tooltip-links {
+        bottom: -30px;
+    }
+}
+
+/* @media(min-width:751px) and (max-width:999px){
+  
+} */
+
+@media(min-width:1000px){
+    html, body {
+        height: 100%;
+    }
+
+    html {
+        display: table;
+        margin: auto;
+    }
+
+    body {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .nav-container{
+        max-width: 1533px;
+    }
+}
