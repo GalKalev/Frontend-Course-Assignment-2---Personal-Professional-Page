@@ -1,55 +1,50 @@
-body{
-    /* height: 5000px; */
+body {
     font-family: Arial;
-    background-color: black;
     cursor: default;
     text-size-adjust: auto;
-    /* max-width: 1400px;
-    min-width: 1000px; */
 }
 
-
-
-
-p{
-    font-size:20px;
-    padding:0 40px;
+p {
+    font-size: 20px;
+    padding: 0 40px;
 }
 
-.nav-container{
+.nav-container {
     position: fixed;
     width: 100%;
     z-index: 100;
-    top:0;
+    top: 0;
 }
 
-.nav{
-
-    /* background-color: #8f94f9; */
+.nav {
     background-color: rgb(234, 234, 234);
     display: flex;
 }
 
-.nav-container a:hover{
+.nav-container a:hover {
     background-color: rgb(250, 132, 152);
 }
 
-.nav-container a, .nav-container a:link, .nav-container a:visited{
-    color:black;
+.nav-container a,
+.nav-container a:link,
+.nav-container a:visited {
+    color: black;
 }
-.nav-container a:hover,.nav-container a:link:hover, .nav-container a:visited:hover{
-    color:black;
+
+.nav-container a:hover,
+.nav-container a:link:hover,
+.nav-container a:visited:hover {
+    color: black;
     text-decoration: underline;
 }
 
-.info{
-    margin:50px 0;
+.info {
+    margin: 50px 0;
 }
 
-.section{
-    padding:50px 0;
-    margin-bottom:10px;
-    /* background-color: lightpink; */
+.section {
+    padding: 50px 0;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,192 +53,202 @@ p{
     background-color: rgb(202, 202, 202);
 }
 
-#home{
+#home {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.profile-photo{
+.profile-photo {
     width: 250px;
-    margin-left:40px;
+    margin-left: 40px;
     border-radius: 40%;
     box-shadow: -10px 5px 5px rgb(131, 131, 131);
 }
 
-.home-text-section{
+.home-text-section {
     /* background-color: lightpink; */
-    top:0;
+    top: 0;
 }
 
-.my-name{
-    color:rgb(250, 132, 152);
-    font-size:55px;
+.my-name {
+    color: rgb(250, 132, 152);
+    font-size: 55px;
     font-weight: bold;
 }
 
-.info h1,.info h2{
-    margin-bottom:50px;
+.info h1,
+.info h2 {
+    margin-bottom: 50px;
     margin-top: 0;
-    /* background-color: lightblue; */
 }
 
-.info h2{
-    color:rgb(250, 132, 152);
+.info h2 {
+    color: rgb(250, 132, 152);
 }
 
-#skills{
+#skills {
     position: relative;
 }
 
-.skill-container{
+.skill-container {
     display: flex;
     justify-content: space-between;
     padding: 30px;
     width: 70%;
 }
 
-.languages{
+.languages {
     display: flex;
     flex-direction: column;
-    padding:10px 60px;
-    right:0;
+    justify-content: start;
+    align-items: stretch;
+    padding: 10px 60px;
+    right: 0;
     background-color: rgb(179, 179, 179);
     border-radius: 20px;
 }
 
-.languages h3{
+.languages h3 {
+    top: 0;
     padding-bottom: 30px;
 }
 
-.languages-list{
-    padding: 20px 10px;
-    position: relative;
-
+.languages-table {
+    flex-grow: 4;
+    width: 100%;
+    border-collapse: collapse;
+    align-items: center;
 }
 
-.languages-list li{
-    font-size: 20px; 
-    border: 2px solid black;
-    padding:30px;
+.languages-table tr {
+    border: 3px solid black;
+}
+
+.languages-table td {
+    font-size: 20px;
+    padding: 30px;
     background-color: rgb(211, 211, 211);
+    text-align: center;
 
 }
+
+
 .logo-icon-skills {
     position: relative;
     padding-left: 50px;
-    list-style-type: none; 
-    /* background-color: lightblue; */
+    list-style-type: none;
 }
 
 .logo-icon-skills::before {
     content: '';
-    /* background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg); */
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    /* background-color: lightpink; */}
+}
 
-#python-logo.logo-icon-skills::before{
+#python-logo.logo-icon-skills::before {
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg);
 
 }
 
-#html-logo.logo-icon-skills::before{
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg);
+#html-logo.logo-icon-skills::before {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg);
 }
 
-#css-logo.logo-icon-skills::before{
+#css-logo.logo-icon-skills::before {
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg);
 }
-#javascript-logo.logo-icon-skills::before{
+
+#javascript-logo.logo-icon-skills::before {
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png);
 }
-#c-logo.logo-icon-skills::before{
+
+#c-logo.logo-icon-skills::before {
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg);
 }
 
-#c-logo.logo-icon-skills::before{
+#c-logo.logo-icon-skills::before {
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg);
 }
 
-#c-sharp-logo.logo-icon-skills::before{
+#c-sharp-logo.logo-icon-skills::before {
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg);
 }
 
-#c-plus-plus-logo.logo-icon-skills::before{
+#c-plus-plus-logo.logo-icon-skills::before {
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg);
 }
 
-.skill-text{
+.skill-text {
     position: relative;
-    Padding:30px 20px;
+    Padding: 30px 20px;
     max-width: 50%;
-    /* background-color: rgb(179, 179, 179); */
-    margin-right:-200px;
 }
 
-.skill-text p{
-    padding-top:20px;
+.skill-text p {
+    padding-top: 20px;
     font-size: 23px;
-    padding:45px;
-    margin:25px 0;
+    padding: 45px;
+    margin: 25px 0;
     border-radius: 50%;
-    background-color:rgb(179, 179, 179);
+    background-color: rgb(179, 179, 179);
 
 }
 
-#skills a:hover{
-    background-color:rgb(250, 132, 152);
+#skills a:hover {
+    background-color: rgb(250, 132, 152);
 
 }
 
-#skills a, #skills a:link, #skills a:visited{
-    color:black;
-    font-size:25px;
-    border: 4px dotted  rgb(250, 132, 152);
+#skills a,
+#skills a:link,
+#skills a:visited {
+    color: black;
+    font-size: 25px;
+    border: 4px dotted rgb(250, 132, 152);
     padding: 5px 15px;
     text-decoration: none;
-    
+
 }
-#skills a:hover,#skills a:link:hover, #skills a:visited:hover{
-    color:white;
+
+#skills a:hover,
+#skills a:link:hover,
+#skills a:visited:hover {
+    color: white;
     text-decoration: underline;
 }
 
 
-.contact-sites-container{
+.contact-sites-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width:180px;
-    /* background-color: red; */
+    width: 180px;
 }
 
-.logo-icon-contact{
+.logo-icon-contact {
     position: relative;
 }
 
-.logo-icon-contact img{
-    width:40px;
-    /* background-color: orange; */
+.logo-icon-contact img {
+    width: 40px;
     box-shadow: -2px 3px 3px rgb(131, 131, 131);
     transition: 0.15s;
 }
 
-.logo-icon-contact img:hover{
+.logo-icon-contact img:hover {
     box-shadow: 0 0 0;
-    /* background-color: green; */
 }
 
-#gamil-logo img{
-    padding-top:5px;
+#gamil-logo img {
+    padding-top: 5px;
     width: 45px;
 }
 
@@ -255,7 +260,7 @@ background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     border-radius: 5px;
-    bottom: -40px; /* Adjust the distance from the icon */
+    bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -266,10 +271,11 @@ background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_
     border-style: solid;
     border-width: 0 8px 8px;
     border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
-    top: -8px; /* Adjust the distance from the icon */
+    top: -8px;
     left: 50%;
     transform: translateX(-50%);
 }
+
 .logo-icon-contact {
     position: relative;
     display: inline-block;
@@ -282,17 +288,7 @@ background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_
 }
 
 
-@media(max-width:950px){
-    /* .nav {
-        flex-direction: column;
-    } */
-
-    /* .nav-container a {
-        text-align: center;
-        width: 100%;
-    } */
-
-    
+@media(max-width:750px) {
 
     #home {
         padding: 20px;
@@ -300,12 +296,14 @@ background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_
         flex-direction: column-reverse;
     }
 
-    .languages {
-        padding: 10px;
+    .skill-container {
+        align-items: center;
+
     }
 
-    .languages-list li {
-        padding: 20px;
+    .languages {
+        padding: 10px;
+        width: 50%
     }
 
     .skill-container {
@@ -324,13 +322,30 @@ background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_
     }
 }
 
-/* @media(min-width:751px) and (max-width:999px){
-  
-} */
+@media(min-width:751px) and (max-width:999px) {
+    .skill-container {
+        justify-content: space-around;
+        padding: 0;
+        /* background-color: red; */
+        margin-bottom: 20px;
+    }
 
-@media(min-width:1000px){
-    html, body {
-        height: 100%;
+    .skill-text p {
+        font-size: 100%;
+    }
+
+    .nav-container a {
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media(min-width:1500px) {
+
+    html,
+    body {
+        /* height: 100%; */
+        max-width: 1500px;
     }
 
     html {
@@ -338,12 +353,7 @@ background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_
         margin: auto;
     }
 
-    body {
-        display: table-cell;
-        vertical-align: middle;
-    }
-
-    .nav-container{
-        max-width: 1533px;
+    .nav-container {
+        max-width: 1500px;
     }
 }
